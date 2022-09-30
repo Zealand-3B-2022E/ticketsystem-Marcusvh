@@ -15,8 +15,8 @@ namespace TicketSystemClassLibrary.Tests
         /// <summary>
         /// Making a private instance field so i dont have to make an Car, MC object for every test where i need them
         /// </summary>
-        private Car _car = new();
-        private MC _mc = new();
+        private Car car = new();
+        private MC mc = new();
 
         // Car 
         [TestMethod()]
@@ -26,7 +26,7 @@ namespace TicketSystemClassLibrary.Tests
             double expected = 240;
 
             // Act
-            double actual = _car.Price();
+            double actual = car.Price();
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -37,9 +37,9 @@ namespace TicketSystemClassLibrary.Tests
         {
             // Arrange
             string expected = "Car";
-
+            
             // Act
-            string actual = _car.VehicleType();
+            string actual = car.VehicleType();
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -54,7 +54,7 @@ namespace TicketSystemClassLibrary.Tests
             double expected = 125;
 
             // Act
-            double actual = _mc.Price();
+            double actual = mc.Price();
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -67,7 +67,7 @@ namespace TicketSystemClassLibrary.Tests
             string expected = "MC";
 
             // Act
-            string actual = _mc.VehicleType();
+            string actual = mc.VehicleType();
 
             // Assert
             Assert.AreEqual(expected, actual);

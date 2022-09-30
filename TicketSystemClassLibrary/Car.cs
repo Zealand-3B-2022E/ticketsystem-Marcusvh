@@ -3,17 +3,13 @@
     /// <summary>
     /// Class that handles a Car
     /// </summary>
-    public class Car
+    public class Car: Vehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
-
-
         /// <summary>
         /// Price for a car to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        public double Price()
+        public override double Price()
         {
             return 240;
         } 
@@ -22,7 +18,7 @@
         /// Specifies What kind of vehicle.
         /// </summary>
         /// <returns>The vehicle type as a string</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         } 

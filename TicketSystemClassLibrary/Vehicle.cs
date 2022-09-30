@@ -11,21 +11,21 @@ namespace TicketSystemClassLibrary
     /// </summary>
     public abstract class Vehicle
     {
-        protected string Licenseplate { get; set; }
-        protected DateTime Date { get; set; }
+        public string Licenseplate { get; set; }
+        public DateTime Date { get; set; }
 
 
         /// <summary>
         /// Price for a Vehicle to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        protected abstract double Price();
+        public abstract double Price();
 
         /// <summary>
         /// Specifies What kind of vehicle.
         /// </summary>
         /// <returns>The vehicle type as a string</returns>
-        protected abstract string VehicleType();
+        public abstract string VehicleType();
 
     }
 }

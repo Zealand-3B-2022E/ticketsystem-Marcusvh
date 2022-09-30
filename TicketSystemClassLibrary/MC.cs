@@ -9,17 +9,13 @@ namespace TicketSystemClassLibrary
     /// <summary>
     /// Class that handles a MC
     /// </summary>
-    public class MC
+    public class MC: Vehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
-
-
         /// <summary>
         /// Price for a MC to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        public double Price()
+        public override double Price()
         {
             return 125;
         }
@@ -28,7 +24,7 @@ namespace TicketSystemClassLibrary
         /// Specifies What kind of vehicle.
         /// </summary>
         /// <returns>The vehicle type as a string</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }
