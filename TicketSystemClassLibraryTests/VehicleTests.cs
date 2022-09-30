@@ -78,7 +78,7 @@ namespace TicketSystemClassLibrary.Tests
         [DataRow("d")]
         [DataRow("DK 25")]
         [DataRow("DK 2567")]
-        public void LicensePlateMayNotBeLongerThen7Characters_ShouldBeSuccess_MCTest(string LPlate)
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldBeSuccess_VehicleTest(string LPlate)
         {
             // Arrange
 
@@ -92,7 +92,7 @@ namespace TicketSystemClassLibrary.Tests
         [TestMethod()]
         [DataRow(null)]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowNullException_MCTest(string LPlate)
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowNullException_VehicleTest(string LPlate)
         {
             // Arrange
 
@@ -104,10 +104,9 @@ namespace TicketSystemClassLibrary.Tests
             Assert.Fail();
         }
         [TestMethod()]
-        [DataRow(null)]
         [DataRow("DK 25678")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowOutOfRangeException_MCTest(string LPlate)
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowOutOfRangeException_VehicleTest(string LPlate)
         {
             // Arrange
 

@@ -11,7 +11,19 @@ namespace TicketSystemClassLibrary
     /// </summary>
     public abstract class Vehicle
     {
-        public string Licenseplate { get; set; }
+
+
+        public string Licenseplate { 
+            get { return Licenseplate; } 
+            set {
+                if (value == null)
+                    throw new ArgumentNullException("You need to fill out the licenseplate");
+                if (value.Length > 7)
+                    throw new ArgumentOutOfRangeException("The licenseplate is to long. it may maximum be 7 characters");
+
+                Licenseplate = value;
+                }
+        }
         public DateTime Date { get; set; }
 
 
