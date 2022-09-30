@@ -1,5 +1,8 @@
 ﻿namespace TicketSystemClassLibrary
 {
+    /// <summary>
+    /// Class that handles a Car
+    /// </summary>
     public class Car
     {
         public string Licenseplate { get; set; }

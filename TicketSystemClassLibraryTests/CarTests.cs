@@ -11,16 +11,36 @@ namespace TicketSystemClassLibrary.Tests
     [TestClass()]
     public class CarTests
     {
+        /// <summary>
+        /// Making a private instance field so i dont have to make an Car object for every test
+        /// </summary>
+        private Car car;
+
+
         [TestMethod()]
-        public void PriceTest()
+        public void PriceShouldReturn240_CarTest()
         {
-            Assert.Fail();
+            // Arrange
+            double expected = 240;
+
+            // Act
+            double actual = car.Price();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
-        public void VehicleTypeTest()
+        public void VehicleTypeShouldReturnCar_CarTest()
         {
-            Assert.Fail();
+            // Arrange
+            string expected = "Car";
+
+            // Act
+            string actual = car.VehicleType();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
