@@ -6,10 +6,18 @@
     public class Car: Vehicle
     {
         /// <summary>
+        /// Price for a car to travel through with or without BroBizz
+        /// </summary>
+        /// <returns>Price in DKK</returns>
+        public double Price(bool broBizz)
+        {
+            return Vehicle.Price(240, broBizz);
+        } 
+        /// <summary>
         /// Price for a car to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        public override double Price()
+        public double Price()
         {
             return 240;
         } 

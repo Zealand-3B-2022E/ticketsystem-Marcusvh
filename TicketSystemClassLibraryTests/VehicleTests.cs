@@ -73,6 +73,8 @@ namespace TicketSystemClassLibrary.Tests
             Assert.AreEqual(expected, actual);
         }
 
+
+        // Vehicle
         [TestMethod()]
         [DataRow("")]
         [DataRow("d")]
@@ -117,5 +119,58 @@ namespace TicketSystemClassLibrary.Tests
             // Assert
             Assert.Fail();
         }
+
+        
+        [TestMethod()]
+        public void DiscountWhenUsingBrobizz_PriceShouldBe5percentLess_MCTest()
+        {
+            // Arrange
+            double expected = mc.Price() * 0.95;
+
+            // Act
+            double actual = mc.Price(true);
+
+            // Assert
+            Assert.AreEqual(expected, actual, 0.1);
+        }
+        [TestMethod()]
+        public void NoDiscountWhenNotUsingBrobizz_PriceShouldBeUnchanged_MCTest()
+        {
+            // Arrange
+            double expected = 125;
+
+            // Act
+            double actual = mc.Price(false);
+
+            // Assert
+            Assert.AreEqual(expected, actual, 0.1);
+        }
+
+        [TestMethod()]
+        public void DiscountWhenUsingBrobizz_PriceShouldBe5percentLess_CarTest()
+        {
+            // Arrange
+            double expected = car.Price() * 0.95;
+
+            // Act
+            double actual = car.Price(true);
+
+            // Assert
+            Assert.AreEqual(expected, actual, 0.1);
+        }
+        [TestMethod()]
+        public void NoDiscountWhenNotUsingBrobizz_PriceShouldBeUnchanged_CarTest()
+        {
+            // Arrange
+            double expected = 240;
+
+            // Act
+            double actual = car.Price(false);
+
+            // Assert
+            Assert.AreEqual(expected, actual, 0.1);
+        }
+
+
     }
 }

@@ -11,8 +11,6 @@ namespace TicketSystemClassLibrary
     /// </summary>
     public abstract class Vehicle
     {
-
-
         public string Licenseplate { 
             get { return Licenseplate; } 
             set {
@@ -26,12 +24,18 @@ namespace TicketSystemClassLibrary
         }
         public DateTime Date { get; set; }
 
-
         /// <summary>
         /// Price for a Vehicle to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        public abstract double Price();
+        public static double Price(double price, bool broBizz)
+        {
+            double broBizzDiscountAmount = 5;
+            if(broBizz == true)
+                return price -= price * (broBizzDiscountAmount / 100);
+            else 
+                return price;
+        }
 
         /// <summary>
         /// Specifies What kind of vehicle.
