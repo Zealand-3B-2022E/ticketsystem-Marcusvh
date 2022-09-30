@@ -20,7 +20,7 @@ namespace TicketSystemClassLibrary.Tests
 
         // Car 
         [TestMethod()]
-        public void PriceShouldReturn240_CarTest()
+        public void Price_ShouldReturn240_CarTest()
         {
             // Arrange
             double expected = 240;
@@ -33,7 +33,7 @@ namespace TicketSystemClassLibrary.Tests
         }
 
         [TestMethod()]
-        public void VehicleTypeShouldReturnCar_CarTest()
+        public void VehicleType_ShouldReturnCar_CarTest()
         {
             // Arrange
             string expected = "Car";
@@ -48,7 +48,7 @@ namespace TicketSystemClassLibrary.Tests
 
         // MC
         [TestMethod()]
-        public void PriceShouldReturn125_MCTest()
+        public void Price_ShouldReturn125_MCTest()
         {
             // Arrange
             double expected = 125;
@@ -61,7 +61,7 @@ namespace TicketSystemClassLibrary.Tests
         }
 
         [TestMethod()]
-        public void VehicleTypeShouldReturnMC_MCTest()
+        public void VehicleType_ShouldReturnMC_MCTest()
         {
             // Arrange
             string expected = "MC";
@@ -71,6 +71,52 @@ namespace TicketSystemClassLibrary.Tests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        [DataRow("")]
+        [DataRow("d")]
+        [DataRow("DK 25")]
+        [DataRow("DK 2567")]
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldBeSuccess_MCTest(string LPlate)
+        {
+            // Arrange
+
+
+            // Act
+            mc.Licenseplate = LPlate;
+
+            // Assert
+            Assert.IsTrue(7 >= mc.Licenseplate.Length);
+        }
+        [TestMethod()]
+        [DataRow(null)]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowNullException_MCTest(string LPlate)
+        {
+            // Arrange
+
+
+            // Act
+            mc.Licenseplate = LPlate;
+
+            // Assert
+            Assert.Fail();
+        }
+        [TestMethod()]
+        [DataRow(null)]
+        [DataRow("DK 25678")]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void LicensePlateMayNotBeLongerThen7Characters_ShouldThrowOutOfRangeException_MCTest(string LPlate)
+        {
+            // Arrange
+
+
+            // Act
+            mc.Licenseplate = LPlate;
+
+            // Assert
+            Assert.Fail();
         }
     }
 }
