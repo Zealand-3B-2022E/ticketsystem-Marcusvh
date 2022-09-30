@@ -1,22 +1,28 @@
-﻿namespace TicketSystemClassLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TicketSystemClassLibrary
 {
     /// <summary>
-    /// Class that handles a Car
+    /// Class that handles a MC
     /// </summary>
-    public class Car
+    public class MC
     {
         public string Licenseplate { get; set; }
         public DateTime Date { get; set; }
 
 
         /// <summary>
-        /// Price for a car to travel through
+        /// Price for a MC to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
         public double Price()
         {
-            return 240;
-        } 
+            return 125;
+        }
 
         /// <summary>
         /// Specifies What kind of vehicle.
@@ -24,9 +30,7 @@
         /// <returns>The vehicle type as a string</returns>
         public string VehicleType()
         {
-            return "Car";
-        } 
-
-
+            return "MC";
+        }
     }
 }
