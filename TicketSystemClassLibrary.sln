@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSystemClassLibraryTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{04F7B951-E047-441E-B96A-A4500E11999F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oresundbron", "Oresundbron\Oresundbron.csproj", "{9CA067D9-898D-4034-8062-41BCFF02BE9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTicketLibrary", "OresundBronTicketLibrary\OresundBronTicketLibrary.csproj", "{86A385CD-CEB3-43ED-9385-FB727252F87D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{04F7B951-E047-441E-B96A-A4500E11999F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04F7B951-E047-441E-B96A-A4500E11999F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04F7B951-E047-441E-B96A-A4500E11999F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CA067D9-898D-4034-8062-41BCFF02BE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CA067D9-898D-4034-8062-41BCFF02BE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CA067D9-898D-4034-8062-41BCFF02BE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CA067D9-898D-4034-8062-41BCFF02BE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A385CD-CEB3-43ED-9385-FB727252F87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A385CD-CEB3-43ED-9385-FB727252F87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A385CD-CEB3-43ED-9385-FB727252F87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A385CD-CEB3-43ED-9385-FB727252F87D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

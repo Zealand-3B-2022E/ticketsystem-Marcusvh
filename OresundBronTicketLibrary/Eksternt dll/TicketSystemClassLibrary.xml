@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketSystemClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:TicketSystemClassLibrary.Car">
+            <summary>
+            Class that handles a Car
+            </summary>
+        </member>
+        <member name="M:TicketSystemClassLibrary.Car.Price(System.Boolean)">
+            <summary>
+            Price for a car to travel through with or without BroBizz
+            </summary>
+            <returns>Price in DKK</returns>
+        </member>
+        <member name="M:TicketSystemClassLibrary.Car.VehicleType">
+            <summary>
+            Specifies What kind of vehicle.
+            </summary>
+            <returns>The vehicle type as a string</returns>
+        </member>
+        <member name="T:TicketSystemClassLibrary.MC">
+            <summary>
+            Class that handles a MC
+            </summary>
+        </member>
+        <member name="M:TicketSystemClassLibrary.MC.Price(System.Boolean)">
+            <summary>
+            Price for a MC to travel through with or without BroBizz
+            </summary>
+            <returns>Price in DKK</returns>
+        </member>
+        <member name="M:TicketSystemClassLibrary.MC.VehicleType">
+            <summary>
+            Specifies What kind of vehicle.
+            </summary>
+            <returns>The vehicle type as a string</returns>
+        </member>
+        <member name="T:TicketSystemClassLibrary.Vehicle">
+            <summary>
+            Base class for Vehicle. The class is abstract
+            </summary>
+        </member>
+        <member name="M:TicketSystemClassLibrary.Vehicle.Price(System.Boolean)">
+            <summary>
+            Price for a Vehicle to travel through
+            </summary>
+            <returns>Price in DKK</returns>
+        </member>
+        <member name="M:TicketSystemClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Specifies What kind of vehicle.
+            </summary>
+            <returns>The vehicle type as a string</returns>
+        </member>
+    </members>
+</doc>
