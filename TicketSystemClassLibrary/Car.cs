@@ -7,7 +7,13 @@ namespace TicketSystemClassLibrary
     /// </summary>
     public class Car: Vehicle
     {
+        /// <summary>
+        /// sets the brobizz discount amount in percent. 5 would be 5 percent 
+        /// </summary>
         public int BrobizzDiscountAmount { get; set; } = 5;
+        /// <summary>
+        /// sets the weekend discount amount in percent. 20 would be 20 percent
+        /// </summary>
         public int WeekendDiscountAmount { get; set; } = 20;
 
         /// <summary>

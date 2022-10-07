@@ -3,8 +3,18 @@ using TicketSystemClassLibrary;
 
 namespace StoreBaeltTicketLibrary
 {
-    public class Storebaelt: Car // navngivning kunne godt være bedre for classen
+
+    /// <summary>
+    /// Class for Storebaelt's logic with cars
+    /// </summary>
+    public class Storebaelt: Car
     {
+
+        /// <summary>
+        /// Method that calculates the price for a car to use the bridge. it handles weekend discount and brobizz
+        /// </summary>
+        /// <param name="broBizz">if the call should include brobizz or not</param>
+        /// <returns>the price after the calculations</returns>
         public override double Price(bool broBizz)
         {
             double price = 240;

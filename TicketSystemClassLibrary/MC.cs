@@ -12,6 +12,9 @@ namespace TicketSystemClassLibrary
     /// </summary>
     public class MC: Vehicle
     {
+        /// <summary>
+        /// sets the brobizz discount amount in percent. 5 would be 5 percent 
+        /// </summary>
         public int BrobizzDiscountAmount { get; set; } = 5;
         /// <summary>
         /// Price for a MC to travel through with or without BroBizz

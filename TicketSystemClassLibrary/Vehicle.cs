@@ -12,6 +12,11 @@ namespace TicketSystemClassLibrary
     public abstract class Vehicle
     {
         private string _lp; // note: den vil ikke løbe mine test igennem hvis jeg retunere propertien selv.
+        /// <summary>
+        /// returns the licenseplate of a vehicle. it will throw an exception if the value is null and if the amount of characters if above 7.
+        /// </summary>
+        /// <exception cref="ArgumentNullException">if value is null</exception>
+        /// <exception cref="ArgumentOutOfRangeException">if value is above 7</exception>
         public string Licenseplate { 
             get { return _lp; } 
             set {
@@ -23,6 +28,9 @@ namespace TicketSystemClassLibrary
                 _lp = value;
                 }
         }
+        /// <summary>
+        /// returns the datetime of when the vehicle is called.
+        /// </summary>
         public DateTime Date { get; set; }
 
         /// <summary>
