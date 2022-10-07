@@ -29,14 +29,7 @@ namespace TicketSystemClassLibrary
         /// Price for a Vehicle to travel through
         /// </summary>
         /// <returns>Price in DKK</returns>
-        public static double Price(double price, bool broBizz)
-        {
-            double broBizzDiscountAmount = 5;
-            if(broBizz == true)
-                return price -= price * (broBizzDiscountAmount / 100);
-            else 
-                return price;
-        }
+        public abstract double Price(bool brobizz);
 
         /// <summary>
         /// Specifies What kind of vehicle.
