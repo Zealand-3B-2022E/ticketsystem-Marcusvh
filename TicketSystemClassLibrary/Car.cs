@@ -1,4 +1,6 @@
-﻿namespace TicketSystemClassLibrary
+﻿using System.Diagnostics;
+
+namespace TicketSystemClassLibrary
 {
     /// <summary>
     /// Class that handles a Car
@@ -9,20 +11,13 @@
         public int WeekendDiscountAmount { get; set; } = 20;
 
         /// <summary>
-        /// Price for a car to travel through with or without BroBizz and weekend discount
+        /// Price for a car to travel through with or without BroBizz
         /// </summary>
         /// <returns>Price in DKK</returns>
         public override double Price(bool broBizz)
         {
-            double price = 240;
-            if (Date.DayOfWeek == DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
-                price = 240 * (1 - (WeekendDiscountAmount / 100.0));
-
-            if(broBizz)
-                price = broBizz ? price * (1 - (BrobizzDiscountAmount / 100.0)) : 240;
-
-            return price;
-        } 
+            return broBizz ? 240 * (1 - (BrobizzDiscountAmount / 100.0)) : 240;
+        }
 
         /// <summary>
         /// Specifies What kind of vehicle.

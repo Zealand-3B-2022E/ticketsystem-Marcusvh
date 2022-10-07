@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using StoreBaeltTicketLibrary;
 
 namespace TicketSystemClassLibrary.Tests
 {
@@ -17,6 +18,7 @@ namespace TicketSystemClassLibrary.Tests
         /// </summary>
         private Car car = new();
         private MC mc = new();
+        private Storebaelt storebaelt = new ();
 
         // Car 
         [TestMethod()]
@@ -175,10 +177,10 @@ namespace TicketSystemClassLibrary.Tests
         {
             // Arrange
             double expected = 192;
-            car.Date = DateTime.Parse("08-10-2022");
+            storebaelt.Date = DateTime.Parse("08-10-2022");
 
             // Act
-            double actual = car.Price(false);
+            double actual = storebaelt.Price(false);
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -189,10 +191,10 @@ namespace TicketSystemClassLibrary.Tests
         {
             // Arrange
             double expected = 240;
-            car.Date = DateTime.Parse("07-10-2022");
+            storebaelt.Date = DateTime.Parse("07-10-2022");
 
             // Act
-            double actual = car.Price(false);
+            double actual = storebaelt.Price(false);
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -203,10 +205,10 @@ namespace TicketSystemClassLibrary.Tests
         {
             // Arrange
             double expected = 182.4;
-            car.Date = DateTime.Parse("08-10-2022");
+            storebaelt.Date = DateTime.Parse("08-10-2022");
 
             // Act
-            double actual = car.Price(true);
+            double actual = storebaelt.Price(true);
 
             // Assert
             Assert.AreEqual(expected, actual, 0.1);

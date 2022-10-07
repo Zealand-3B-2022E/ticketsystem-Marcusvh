@@ -30,6 +30,7 @@ namespace TicketSystemClassLibrary
         /// </summary>
         /// <returns>Price in DKK</returns>
         public abstract double Price(bool brobizz);
+        
 
         /// <summary>
         /// Specifies What kind of vehicle.
