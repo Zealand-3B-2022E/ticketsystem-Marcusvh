@@ -8,6 +8,8 @@
     <IsPackable>false</IsPackable>
 
     <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
