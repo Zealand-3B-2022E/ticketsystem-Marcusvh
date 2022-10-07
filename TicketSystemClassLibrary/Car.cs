@@ -18,7 +18,9 @@
             if (Date.DayOfWeek == DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
                 price = 240 * (1 - (WeekendDiscountAmount / 100.0));
 
-            price = broBizz ? price * (1 - (BrobizzDiscountAmount / 100.0)) : 240;
+            if(broBizz)
+                price = broBizz ? price * (1 - (BrobizzDiscountAmount / 100.0)) : 240;
+
             return price;
         } 
 

@@ -26,7 +26,7 @@ namespace TicketSystemClassLibrary.Tests
             double expected = 240;
 
             // Act
-            double actual = car.Price();
+            double actual = car.Price(false);
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -54,7 +54,7 @@ namespace TicketSystemClassLibrary.Tests
             double expected = 125;
 
             // Act
-            double actual = mc.Price();
+            double actual = mc.Price(false);
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -125,7 +125,7 @@ namespace TicketSystemClassLibrary.Tests
         public void DiscountWhenUsingBrobizz_PriceShouldBe5percentLess_MCTest()
         {
             // Arrange
-            double expected = mc.Price() * 0.95;
+            double expected = mc.Price(false) * 0.95;
 
             // Act
             double actual = mc.Price(true);
@@ -143,14 +143,14 @@ namespace TicketSystemClassLibrary.Tests
             double actual = mc.Price(false);
 
             // Assert
-            Assert.AreEqual(expected, actual, 0.1);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
         public void DiscountWhenUsingBrobizz_PriceShouldBe5percentLess_CarTest()
         {
             // Arrange
-            double expected = car.Price() * 0.95;
+            double expected = car.Price(false) * 0.95;
 
             // Act
             double actual = car.Price(true);
@@ -168,9 +168,48 @@ namespace TicketSystemClassLibrary.Tests
             double actual = car.Price(false);
 
             // Assert
-            Assert.AreEqual(expected, actual, 0.1);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod()]
+        public void WeekendDiscountWhenNotUsingBrobizz_PriceShouldBe20PercentLess_CarTest()
+        {
+            // Arrange
+            double expected = 192;
+            car.Date = DateTime.Parse("08-10-2022");
+
+            // Act
+            double actual = car.Price(false);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod()]
+        public void NoWeekendDiscountAndNoBrobizz_PriceShouldBeUnchanged_CarTest()
+        {
+            // Arrange
+            double expected = 240;
+            car.Date = DateTime.Parse("07-10-2022");
+
+            // Act
+            double actual = car.Price(false);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod()]
+        public void WeekendAndBrobizzDiscount_PriceShouldBe182dot4_CarTest()
+        {
+            // Arrange
+            double expected = 182.4;
+            car.Date = DateTime.Parse("08-10-2022");
 
+            // Act
+            double actual = car.Price(true);
+
+            // Assert
+            Assert.AreEqual(expected, actual, 0.1);
+        }
     }
 }
