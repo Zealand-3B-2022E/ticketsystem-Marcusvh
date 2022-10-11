@@ -9,6 +9,14 @@ namespace StoreBaeltTicketLibrary
     /// </summary>
     public class Storebaelt: Car
     {
+        private bool _brobizz;
+        public bool Brobizz { 
+            get { return _brobizz; }
+            set { PriceForTicket = Price(value); 
+            _brobizz = value;
+            }
+        }
+        public double PriceForTicket { get; private set; }
 
         /// <summary>
         /// Method that calculates the price for a car to use the bridge. it handles weekend discount and brobizz

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace TicketSystemClassLibrary
@@ -30,7 +31,9 @@ namespace TicketSystemClassLibrary
         }
         /// <summary>
         /// returns the datetime of when the vehicle is called.
+        /// Testing the JsonIgnore annotation. should not show in swagger even when its public
         /// </summary>
+        [JsonIgnore]
         public DateTime Date { get; set; }
 
         /// <summary>

@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OresundBronTicketLibrary\OresundBronTicketLibrary.csproj" />
     <ProjectReference Include="..\StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj" />
+    <ProjectReference Include="..\StorebeltbroenTicketREST\StorebeltbroenTicketREST.csproj" />
     <ProjectReference Include="..\TicketSystemClassLibrary\TicketSystemClassLibrary.csproj" />
   </ItemGroup>
 

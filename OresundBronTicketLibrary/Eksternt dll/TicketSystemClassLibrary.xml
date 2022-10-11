@@ -9,6 +9,16 @@
             Class that handles a Car
             </summary>
         </member>
+        <member name="P:TicketSystemClassLibrary.Car.BrobizzDiscountAmount">
+            <summary>
+            sets the brobizz discount amount in percent. 5 would be 5 percent 
+            </summary>
+        </member>
+        <member name="P:TicketSystemClassLibrary.Car.WeekendDiscountAmount">
+            <summary>
+            sets the weekend discount amount in percent. 20 would be 20 percent
+            </summary>
+        </member>
         <member name="M:TicketSystemClassLibrary.Car.Price(System.Boolean)">
             <summary>
             Price for a car to travel through with or without BroBizz
@@ -26,6 +36,11 @@
             Class that handles a MC
             </summary>
         </member>
+        <member name="P:TicketSystemClassLibrary.MC.BrobizzDiscountAmount">
+            <summary>
+            sets the brobizz discount amount in percent. 5 would be 5 percent 
+            </summary>
+        </member>
         <member name="M:TicketSystemClassLibrary.MC.Price(System.Boolean)">
             <summary>
             Price for a MC to travel through with or without BroBizz
@@ -41,6 +56,19 @@
         <member name="T:TicketSystemClassLibrary.Vehicle">
             <summary>
             Base class for Vehicle. The class is abstract
+            </summary>
+        </member>
+        <member name="P:TicketSystemClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            returns the licenseplate of a vehicle. it will throw an exception if the value is null and if the amount of characters if above 7.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">if value is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">if value is above 7</exception>
+        </member>
+        <member name="P:TicketSystemClassLibrary.Vehicle.Date">
+            <summary>
+            returns the datetime of when the vehicle is called.
+            Testing the JsonIgnore annotation. should not show in swagger even when its public
             </summary>
         </member>
         <member name="M:TicketSystemClassLibrary.Vehicle.Price(System.Boolean)">

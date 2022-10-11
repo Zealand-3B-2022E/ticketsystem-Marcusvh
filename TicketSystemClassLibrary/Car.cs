@@ -10,11 +10,11 @@ namespace TicketSystemClassLibrary
         /// <summary>
         /// sets the brobizz discount amount in percent. 5 would be 5 percent 
         /// </summary>
-        public int BrobizzDiscountAmount { get; set; } = 5;
+        protected int BrobizzDiscountAmount { get; set; } = 5;
         /// <summary>
         /// sets the weekend discount amount in percent. 20 would be 20 percent
         /// </summary>
-        public int WeekendDiscountAmount { get; set; } = 20;
+        protected int WeekendDiscountAmount { get; set; } = 20;
 
         /// <summary>
         /// Price for a car to travel through with or without BroBizz
@@ -33,6 +33,7 @@ namespace TicketSystemClassLibrary
         {
             return "Car";
         } 
+
 
 
     }
